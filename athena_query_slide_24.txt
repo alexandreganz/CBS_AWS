@@ -1,0 +1,9 @@
+#AWS Athena Join Command Version 1:
+
+SELECT * FROM “de_youtube_raw”.”raw_statistics” a 
+INNER JOIN “db_youtube_cleaned”.”cleaned_statistics_reference_data” b on a.category_id=b.id;
+
+#AWS Athena Join Command Version 2:
+SELECT * FROM “de_youtube_raw”.”raw_statistics” a 
+INNER JOIN “db_youtube_cleaned”.”cleaned_statistics_reference_data” b on a.category_id=b.id(b.id as int);
+
